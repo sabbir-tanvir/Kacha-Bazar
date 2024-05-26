@@ -10,8 +10,6 @@ body {
     height: 100vh;
 }
 
-
-
 .admin {
     width: 100%;
     max-width: 400px;
@@ -27,6 +25,7 @@ body {
 .admin-input {
     margin-bottom: 2em;
 }
+
 
 .admin-input .username,
 .admin-input .password {
@@ -82,3 +81,13 @@ body {
     background: var(--color);
     color: #fff;
   }
+
+  .error-placeholder {
+    color: red;
+}
+.error {
+  border: 2px solid red;
+  box-shadow: 0 0 5px red;
+}
+
+
