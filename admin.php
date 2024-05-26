@@ -3,13 +3,12 @@ include 'connection.php';
 
 session_start();
 
-$error_message = false;
 
 if (isset($_POST['login'])) {
     $name = $_POST['a_name'];
     $pass = $_POST['a_pass'];
 
-    $query = "SELECT * FROM user WHERE u_name = ? AND u_pass = ?";
+    $query = "SELECT * FROM admin WHERE a_name = ? AND a_pass = ?";
     $stmt = mysqli_prepare($db_connect, $query);
     
     if ($stmt === false) {
@@ -21,12 +20,11 @@ if (isset($_POST['login'])) {
 
         if (mysqli_num_rows($result) > 0) {
             // Username and password match
-            $_SESSION['u_name'] = $name;
-            header('Location: index.php');
+            $_SESSION['a_name'] = $name;
+            header('Location: insert.php');
             exit;
         } else {
             // Username and password do not match
-            $error_message = true;
         }
 
         mysqli_stmt_close($stmt);
@@ -34,6 +32,7 @@ if (isset($_POST['login'])) {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +47,7 @@ if (isset($_POST['login'])) {
 <body>
     <section class="admin">
         <h1>Admin Login</h1>
-        <form method="post" action="login.php" id="login-form">
+        <form method="post" action="admin.php" id="login-form">
             <div class="admin-input">
                 <div class="username">
                     <input type="text" name="a_name" id="username" class="item" placeholder="Username" required>
@@ -59,8 +58,7 @@ if (isset($_POST['login'])) {
             </div>
             <br>
             <div class="btn">
-                <button type="submit" name="login" class="button-89">Login</button>
-            </div>
+            <button type="submit" name="login" class="button-89">Login</button>            </div>
         </form>
     </section>
     <script src="login.js"></script>

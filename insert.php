@@ -1,30 +1,26 @@
-<?php 
+<?php
 include 'connection.php';
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $price = $_POST['price'];
     $weight = $_POST['weight'];
-    $file = $_POST['file'];
-    $loc = $_POST['location'];
 
-    // Corrected column name in SQL query
-    $insert_query = "INSERT INTO user(u_name, u_pass, p_num, email, location) VALUES (?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($db_connect, $insert_query);
-    
-    // Binding parameters correctly
-    mysqli_stmt_bind_param($stmt, 'sssss', $name, $pass, $num, $email, $loc);
+    // File upload handling
+    $file_name = $_FILES['image']['name'];
+    $tempname = $_FILES['image']['tmp_name'];
+    $folder = 'images/' . $file_name;
 
-    if (mysqli_stmt_execute($stmt)) {
-        mysqli_stmt_close($stmt);
-        mysqli_close($db_connect);
-        // Redirect to login.php after successful submission
-        header('Location: login.php');
-        exit;
+    // Check if file is uploaded and move it to the specified folder
+    if (move_uploaded_file($tempname, $folder)) {
+        // Insert data into the database
+        $insert_query = "INSERT INTO items(name, price, weight, file) VALUES ('$name','$price','$weight', '$file_name')";
+        if (mysqli_query($db_connect, $insert_query)) {
+        } else {
+            echo "Error: " . $insert_query . "<br>" . mysqli_error($db_connect);
+        }
     } else {
-        echo "Error: " . mysqli_error($db_connect);
-        mysqli_stmt_close($stmt);
-        mysqli_close($db_connect);
+        echo "Failed to upload image.";
     }
 }
 ?>
@@ -57,13 +53,13 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="input-box">
                     <div class="input-field">
-                        <input type="text" placeholder="Price" id="jobTitle" name="pos" class="item" autocomplete="off">
+                        <input type="text" placeholder="Price" id="jobTitle" name="price" class="item" autocomplete="off">
                         <span class="focus"></span>
                     </div>
                 </div>
                 <div class="input-box">
                     <div class="input-field">
-                        <input type="text" placeholder="Weight" id="userImage" name="image" class="item" autocomplete="off">
+                        <input type="text" placeholder="Weight" id="userImage" name="weight" class="item" autocomplete="off">
                         <span class="focus"></span>
                     </div>
                 </div>
@@ -78,6 +74,9 @@ if (isset($_POST['submit'])) {
                 <div class="btn-box">
                     <button type="submit" name="submit" class="button-89">Submit</button>
                 </div>
+            
+                <h3>Are You done? Boss 🫣<a href="index.php">Go Back</a></h3>
+
             </div>
         </form>
 

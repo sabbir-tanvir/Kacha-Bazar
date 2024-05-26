@@ -1,3 +1,10 @@
+<?php
+
+include 'connection.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -213,6 +220,37 @@
                     <i class="far fa-heart"></i>
                 </a>
             </div>
+
+            <?php
+
+
+            $select_query = "SELECT * FROM items";
+            $result = mysqli_query($db_connect, $select_query);
+
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                    <div class="product-box">
+                        <img src="images/<?php echo htmlspecialchars($row['file']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>" />
+                        <strong><?php echo htmlspecialchars($row['name']); ?></strong>
+                        <span class="quantity"><?php echo htmlspecialchars($row['weight']); ?> KG</span>
+                        <span class="price"><?php echo htmlspecialchars($row['price']); ?> TK</span>
+                        <!--cart-btn------->
+                        <a href="#" class="cart-btn">
+                            <i class="fas fa-shopping-bag"></i> Add Cart
+                        </a>
+                        <!--like-btn------->
+                        <a href="#" class="like-btn">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+            <?php
+                }
+            } else {
+                echo "Error: " . $select_query . "<br>" . mysqli_error($db_connect);
+            }
+
+            ?>
         </div>
     </section>
     <!--popular-product-end--------------------->
@@ -510,7 +548,7 @@
                 </p>
             </div>
             <?php
-            include 'connection.php'; // Include the database connection file
+
 
             if (isset($_POST['submit'])) {
                 $name = $_POST['name'];

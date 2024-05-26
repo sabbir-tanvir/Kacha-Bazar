@@ -9,6 +9,9 @@ body {
     align-items: center;
     height: 100vh;
 }
+a {
+    text-decoration: none;
+}
 
 .contact {
     min-height: auto;
@@ -32,7 +35,7 @@ body {
 }
 .contact form .box {
     border: .6 solid blue;
-    height: 400px;
+    height: 430px;
     padding: 25px;
     border-radius: 20px;
     background-color: #d8bbbb36;
@@ -71,6 +74,7 @@ body {
 }
 .btn-box {
     margin-top: 15px;
+    margin-bottom: 23px;
 }
 
 .button-89 {
