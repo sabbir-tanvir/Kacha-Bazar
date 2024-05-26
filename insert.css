@@ -1,0 +1,109 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: rgba(24, 30, 29, 0.6); /* Lowered opacity for the solid background color */
+    background: linear-gradient(90deg, rgba(69,252,222,1) 20%, rgba(47, 119, 14, 0.566) 69%); /* Lowered opacity for the gradient background */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact {
+    min-height: auto;
+    padding-bottom: 4rem;
+    padding-top: 60px;
+}
+
+.contact h2 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact form {
+    max-width: 50%; /* Set the form width to 50% */
+    margin: 0 auto; /* Center the form */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contact form .box {
+    border: .6 solid blue;
+    height: 400px;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #d8bbbb36;
+    box-shadow: 2px 2px rgba(53, 151, 72, 0.6);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 100%;
+    margin: .8rem 0;
+    display: flex;
+}
+
+.contact form .input-box .input-field input,
+.contact form .input-box .input-field select{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #f1f1f1;
+    box-shadow:  8px 8px 7px rgba(97, 60, 216, 0.6);
+}
+.btn-box {
+    margin-top: 15px;
+}
+
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}

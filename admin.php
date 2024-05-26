@@ -42,12 +42,12 @@ if (isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="admin.css">
 </head>
 
 <body>
     <section class="admin">
-        <h1>Login</h1>
+        <h1>Admin Login</h1>
         <form method="post" action="login.php" id="login-form">
             <div class="admin-input">
                 <div class="username">
@@ -60,9 +60,7 @@ if (isset($_POST['login'])) {
             <br>
             <div class="btn">
                 <button type="submit" name="login" class="button-89">Login</button>
-                <a href="reg.php"><button type="button" class="button-89" style="margin-left: 45px;">Sign Up</button></a>
             </div>
-            <h3>Are you a Admin? <a href="admin.php">YES</a></h3>
         </form>
     </section>
     <script src="login.js"></script>
