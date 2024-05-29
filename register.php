@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
         mysqli_stmt_close($stmt);
         mysqli_close($db_connect);
         // Redirect to login.php after successful submission
-        header('Location: login.php');
+        header('Location: index.php');
         exit;
     } else {
         echo "Error: " . mysqli_error($db_connect);

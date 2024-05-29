@@ -22,7 +22,7 @@ if (isset($_POST['search'])) {
         echo "Error: " . mysqli_error($db_connect);
     }
 } else {
-    header("Location: index.php");
+    header("Location: home.php");
     exit();
 }
 ?>

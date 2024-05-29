@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['search_results'])) {
-    header("Location: indexx.php");
+    header("Location: home.php");
     exit();
 }
 
@@ -35,8 +35,8 @@ unset($_SESSION['search_results']);
                     <tr>
                         <td><?php echo htmlspecialchars($result['category']); ?></td>
                         <td><?php echo htmlspecialchars($result['name']); ?></td>
-                        <td><?php echo htmlspecialchars($result['price']); ?></td>
-                        <td><?php echo htmlspecialchars($result['weight']); ?></td>
+                        <td><?php echo htmlspecialchars($result['price']); ?> TK</td>
+                        <td><?php echo htmlspecialchars($result['weight']); ?> KG</td>
                         <td><img src="images/<?php echo htmlspecialchars($result['file']); ?>" alt="<?php echo htmlspecialchars($result['name']); ?>" width="100"></td>
 
                     </tr>

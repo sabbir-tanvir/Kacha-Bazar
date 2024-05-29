@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
                     <button type="submit" name="submit" class="button-89">Submit</button>
                 </div>
 
-                <h3>Are You done? Boss 🫣<a href="index.php">Go Back</a></h3>
+                <h3>Are You done? Boss 🫣<a href="home.php">Go Back</a></h3>
 
             </div>
         </form>
