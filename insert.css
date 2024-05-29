@@ -1,80 +1,105 @@
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: rgba(24, 30, 29, 0.6); /* Lowered opacity for the solid background color */
-    background: linear-gradient(90deg, rgba(69,252,222,1) 20%, rgba(47, 119, 14, 0.566) 69%); /* Lowered opacity for the gradient background */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: rgba(24, 30, 29, 0.6); /* Lowered opacity for the solid background color */
+  background: linear-gradient(90deg, rgba(69,252,222,1) 20%, rgba(47, 119, 14, 0.566) 69%); /* Lowered opacity for the gradient background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.output {
+  width: 70%;
+  margin: 0 auto 40px auto; /* Center the output div and add bottom margin */
+  text-align: center;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%; /* Set the table width to 100% of the parent */
+}
+
+th, td {
+  padding: 10px; 
+  border: 2px solid black;
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #f2f2f2;
 }
 
 .contact {
-    min-height: auto;
-    padding-bottom: 4rem;
-    padding-top: 60px;
+  min-height: auto;
+  padding-bottom: 4rem;
+  padding-top: 60px;
+  width: 600Px;
 }
 
 .contact h2 {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
 }
 
 .contact form {
-    max-width: 50%; /* Set the form width to 50% */
-    margin: 0 auto; /* Center the form */
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    
+  max-width: 80%; /* Set the form width to 50% */
+  margin: 0 auto; /* Center the form */
+  text-align: center;
 }
+
 .contact form .box {
-    border: .6 solid blue;
-    height: 430px;
-    padding: 25px;
-    border-radius: 20px;
-    background-color: #d8bbbb36;
-    box-shadow: 2px 2px rgba(53, 151, 72, 0.6);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  
+  border: .6 solid blue;
+  height: 480px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #d8bbbb36;
+  box-shadow: 2px 2px rgba(53, 151, 72, 0.6);
+  text-align: center;
 }
 
 .contact form .input-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact form .input-box .input-field {
-    position: relative;
-    width: 100%;
-    margin: .8rem 0;
-    display: flex;
+  width: 90%;
+  margin: .8rem 0;
 }
 
 .contact form .input-box .input-field input,
-.contact form .input-box .input-field select{
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    color: black;
-    font-size: 16px;
-    background-color: white;
-    border-radius: 8px;
-    border: 1px solid #f1f1f1;
-    box-shadow:  8px 8px 7px rgba(97, 60, 216, 0.6);
+.contact form .input-box .input-field select {
+  width: 90%;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 8px 8px 7px rgba(97, 60, 216, 0.6);
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
+
+.contact form .input-box .input-field select {
+  -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+  appearance: none;         /* Standardize appearance across browsers */
+  padding-right: 10px;      /* Adjust padding to match the input element */
+}
+
+
 .btn-box {
-    margin-top: 15px;
-    margin-bottom: 23px;
+  margin-top: 15px;
+  margin-bottom: 23px;
 }
 
 .button-89 {
@@ -86,8 +111,8 @@ a {
   color: var(--color);
   --_p: var(--s);
   background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: .6em;
@@ -101,7 +126,7 @@ a {
 }
 
 .button-89:hover,
-.button-89:focus-visible{
+.button-89:focus-visible {
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;

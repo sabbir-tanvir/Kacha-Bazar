@@ -684,10 +684,9 @@ include 'connection.php';
                 <a href="#"><span>kinben</span>NAKI?</a>
                 <!--social----->
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/sabbir.x.tanvir/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/Sabbir__Tanvir"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sabbir_x_tanvir/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <!--links------------------------->
@@ -714,7 +713,7 @@ include 'connection.php';
             <div class="footer-links">
                 <strong>Contact</strong>
                 <ul>
-                    <li><a href="#">Phone : </a></li>
+                    <li><a href="#">Phone : 01777357613</a></li>
                     <li><a href="#">Email : sabbirmahmudtanvir@gmail.com</a></li>
                 </ul>
             </div>

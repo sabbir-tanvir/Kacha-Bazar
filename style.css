@@ -288,7 +288,7 @@ background-color:#40aa54;}
     width: 100%;
     border: 1px solid #eeeeee;
     border-radius: 20px;
-    background-color: #ffffff;
+    background-color: #ffffffdf;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -353,8 +353,9 @@ background-color:#40aa54;}
     margin: 50px auto;
     padding: 60px 0px 20px 0px;
     border-radius: 20px;
-    background-color: #ecf7ee;
+    background-color: #cde1d2;
     border: 1px solid #f3f3f3;
+    box-shadow: 2px 2px rgba(53, 151, 72, 0.6);
     align-items: center;
 }
 .product-container,
