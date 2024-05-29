@@ -3,7 +3,7 @@ include 'connection.php';
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
-    $catagory = $_POST['fish'];
+    $category = $_POST['cat'];
     $price = $_POST['price'];
     $weight = $_POST['weight'];
 
@@ -14,9 +14,15 @@ if (isset($_POST['submit'])) {
 
     // Check if file is uploaded and move it to the specified folder
     if (move_uploaded_file($tempname, $folder)) {
-        // Insert data into the database
-        $insert_query = "INSERT INTO items(name,cat, price, weight, file) VALUES ('$name','$ctagory','$price','$weight', '$file_name')";
+        // Determine the table based on the category
+        if ($category == 'veg') {
+            $insert_query = "INSERT INTO items(name, cat, price, weight, file) VALUES ('$name', '$category', '$price', '$weight', '$file_name')";
+        } elseif ($category == 'meat') {
+            $insert_query = "INSERT INTO item2(name, cat, price, weight, file) VALUES ('$name', '$category', '$price', '$weight', '$file_name')";
+        }
+
         if (mysqli_query($db_connect, $insert_query)) {
+            echo "Data inserted successfully";
         } else {
             echo "Error: " . $insert_query . "<br>" . mysqli_error($db_connect);
         }
@@ -54,9 +60,9 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="input-box">
                     <div class="input-field">
-                        <select placeholder="" id="cat" name="cat" class="item" autocomplete="off">
-                            <option value="fish">Fish</option>
-                            <option value="meat">Meat</option>
+                        <select id="cat" name="cat" class="item" autocomplete="off">
+                            <option value="veg">Vegetable</option>
+                            <option value="meat">Meat / Fish</option>
                         </select>
                     </div>
                 </div>

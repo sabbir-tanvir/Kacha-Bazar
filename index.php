@@ -63,13 +63,13 @@ include 'connection.php';
             <h1>Kanchon Daily Kacha Bazar</h1>
             <strong>#Free Delivery</strong>
             <!--search-box------>
-            <form action="" class="search-box">
+            <form action="search.php" method="POST" class="search-box">
                 <!--icon------>
                 <i class="fas fa-search"></i>
                 <!--input----->
-                <input type="text" class="search-input" placeholder="Search your daily groceries" name="search" required />
+                <input type="text" class="search-input" placeholder="Search your daily groceries" name="search_term" required />
                 <!--btn------->
-                <input type="submit" class="search-btn" value="Search" />
+                <input type="submit" class="search-btn" value="Search" name="search" />
             </form>
         </div>
     </section>
@@ -353,6 +353,37 @@ include 'connection.php';
                     <i class="far fa-heart"></i>
                 </a>
             </div>
+
+            <?php
+
+
+            $select_query = "SELECT * FROM item2";
+            $result = mysqli_query($db_connect, $select_query);
+
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                    <div class="product-box">
+                        <img src="images/<?php echo htmlspecialchars($row['file']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>" />
+                        <strong><?php echo htmlspecialchars($row['name']); ?></strong>
+                        <span class="quantity"><?php echo htmlspecialchars($row['weight']); ?> KG</span>
+                        <span class="price"><?php echo htmlspecialchars($row['price']); ?> TK</span>
+                        <!--cart-btn------->
+                        <a href="#" class="cart-btn">
+                            <i class="fas fa-shopping-bag"></i> Add Cart
+                        </a>
+                        <!--like-btn------->
+                        <a href="#" class="like-btn">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+            <?php
+                }
+            } else {
+                echo "Error: " . $select_query . "<br>" . mysqli_error($db_connect);
+            }
+
+            ?>
         </div>
     </section>
     <!--Popular-bundle-pack===================================-->
