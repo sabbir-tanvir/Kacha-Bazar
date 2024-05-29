@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
 <body>
     <section class="admin">
         <h1>Login</h1>
-        <form method="post" action="login.php" id="login-form">
+        <form method="post" action="index.php" id="login-form">
             <div class="admin-input">
                 <div class="username">
                     <input type="text" name="a_name" id="username" class="item" placeholder="Username" required>
