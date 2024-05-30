@@ -21,6 +21,9 @@ a {
   margin: 0 auto 40px auto; /* Center the output div and add bottom margin */
   text-align: center;
   display: block;
+  border: 1px solid rgb(203, 227, 150);
+  box-shadow: 7px 7px 7px rgb(21, 20, 20);
+
 }
 
 table {
@@ -32,11 +35,12 @@ th, td {
   padding: 10px; 
   border: 2px solid black;
   text-align: left;
-  background-color: #f2f2f2;
+  background-color: #fffffff2;
+
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #abbaf5;
 }
 
 .contact {

@@ -22,7 +22,6 @@ if (isset($_POST['submit'])) {
         }
 
         if (mysqli_query($db_connect, $insert_query)) {
-
         } else {
             echo "Error: " . $insert_query . "<br>" . mysqli_error($db_connect);
         }
@@ -47,7 +46,7 @@ if (isset($_POST['submit'])) {
 <body>
     <section class="contact">
         <h2>
-            Upload the Image and Price
+            Upload the FOOD Image and Price
         </h2>
         <br>
         <form method="post" enctype="multipart/form-data" class="form">
@@ -96,6 +95,7 @@ if (isset($_POST['submit'])) {
         </form>
 
     </section>
+
     <div class="output">
         <h2>User Information</h2>
         <?php
@@ -121,7 +121,7 @@ if (isset($_POST['submit'])) {
         if (mysqli_num_rows($result) > 0) {
 
             echo "<table>";
-            echo "<tr><th>ID</th><th>User Name</th><th>Password</th><th>Email</th><th>Edit</th><th>Delete</th></tr>";
+            echo "<tr><th>ID</th><th>User Name</th><th>Password</th><th>Email</th><th>Delete</th></tr>";
 
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
@@ -129,7 +129,6 @@ if (isset($_POST['submit'])) {
                 echo "<td>" . $row["u_name"] . "</td>";
                 echo "<td>" . $row["u_pass"] . "</td>";
                 echo "<td>" . $row["email"] . "</td>";
-                echo "<td><a href='edit.php?id=" . $row["id"] . "'>Edit</a></td>";
                 echo "<td><a href='insert.php?deleteid=" . $row["id"] . "' onclick=\"return confirm('Are you sure you want to delete this record?');\">Delete</a></td>";
                 echo "</tr>";
             }
@@ -141,6 +140,98 @@ if (isset($_POST['submit'])) {
         ?>
 
     </div>
+
+    <div class="output">
+        <h2>Product Information For Vegitable</h2>
+        <?php
+        if (isset($_GET['deleteid3'])) {
+            $id = $_GET['deleteid3'];
+
+            $sql = "DELETE FROM items WHERE id='$id'";
+            $run = mysqli_query($db_connect, $sql);
+
+            if ($run) {
+                echo "<h1>Data Deleted</h1>";
+                header("Location: insert.php");
+                exit();
+            } else {
+                echo "<h1>Data not Deleted</h1>";
+            }
+        }
+
+        $sql = "SELECT * FROM items";
+
+        $result = mysqli_query($db_connect, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+
+            echo "<table>";
+            echo "<tr><th>ID</th><th>Name</th><th>Price</th><th>Edit</th><th>Delete</th></tr>";
+
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["price"] ."  TK", "</td>";
+                echo "<td><a href='edit.php?id=" . $row["id"] . "'>Edit</a></td>";
+                echo "<td><a href='insert.php?deleteid3=" . $row["id"] . "' onclick=\"return confirm('Are you sure you want to delete this record?');\">Delete</a></td>";
+                echo "</tr>";
+            }
+
+            echo "</table>";
+        } else {
+            echo "No students found";
+        }
+        ?>
+
+    </div>
+    <div class="output">
+        <h2>Product Information for Fish & Meat</h2>
+        <?php
+        if (isset($_GET['deleteid2'])) {
+            $id = $_GET['deleteid2'];
+
+            $sql = "DELETE FROM item2 WHERE id='$id'";
+            $run = mysqli_query($db_connect, $sql);
+
+            if ($run) {
+                echo "<h1>Data Deleted</h1>";
+                header("Location: insert.php");
+                exit();
+            } else {
+                echo "<h1>Data not Deleted</h1>";
+            }
+        }
+
+        $sql = "SELECT * FROM item2";
+
+        $result = mysqli_query($db_connect, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+
+            echo "<table>";
+            echo "<tr><th>ID</th><th>Name</th><th>Price</th><th>Edit</th><th>Delete</th></tr>";
+
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["price"] ."  TK", "</td>";
+                echo "<td><a href='edit.php?id=" . $row["id"] . "'>Edit</a></td>";
+                echo "<td><a href='insert.php?deleteid2=" . $row["id"] . "' onclick=\"return confirm('Are you sure you want to delete this record?');\">Delete</a></td>";
+                echo "</tr>";
+            }
+
+            echo "</table>";
+        } else {
+            echo "No students found";
+        }
+        ?>
+
+    </div>
+
+
+
 
     <div class="output">
         <h2>Feedback Information</h2>

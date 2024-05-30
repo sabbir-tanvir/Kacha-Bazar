@@ -34,9 +34,6 @@ unset($_SESSION['search_results']);
                     <a href="#" class="cart-btn">
                         <i class="fas fa-shopping-bag"></i> Add Cart
                     </a>
-                    <a href="#" class="like-btn">
-                        <i class="far fa-heart"></i>
-                    </a>
                 </div>
             <?php endforeach; ?>
         <?php else : ?>

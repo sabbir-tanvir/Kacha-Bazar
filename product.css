@@ -118,13 +118,7 @@ a {
     border-radius: 10px;
 }
 
-.product-box .like-btn {
-    position: absolute;
-    right: 30px;
-    top: 20px;
-    color: #c9c9c9;
-    font-size: 1.3rem;
-}
+
 
 @media (max-width: 768px) {
     .product-container {

@@ -17,7 +17,7 @@
                 </div>
                 
                 <div class="password">
-                    <input type="password" name="u_pass"  placeholder="Password" required>
+                    <input type="password" name="u_pass" placeholder="Password" required>
                 </div>
                 <div class="number">
                     <input type="number" name="p_num" placeholder="Phone Number" required>

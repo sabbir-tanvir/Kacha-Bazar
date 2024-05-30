@@ -4,7 +4,6 @@ include 'connection.php';
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +34,7 @@ include 'connection.php';
         <ul class="menu">
             <li><a href="home.php" class="active">Home</a></li>
             <li><a href="#category">Categories</a></li>
-            <li><a href="login.php">Our Packages</a></li>
+            <li><a href="#popular-product">Our Packages</a></li>
             <li><a href="reg.php">Feedback</a></li>
         </ul>
         <!--right-nav-(cart-like)-->
@@ -324,7 +323,7 @@ include 'connection.php';
                     <img src="images/client-1.jpg" alt="client" />
                     <!--text-->
                     <div class="profile-text">
-                        <strong>James Mcavoy</strong>
+                        <strong>Sabbir Tanvir</strong>
                         <span>CEO</span>
                     </div>
                 </div>
@@ -352,7 +351,7 @@ include 'connection.php';
                     <img src="images/client-2.jpg" alt="client" />
                     <!--text-->
                     <div class="profile-text">
-                        <strong>Adward Mcavoy</strong>
+                        <strong>Tanvir Sabbir</strong>
                         <span>Software Developer</span>
                     </div>
                 </div>
@@ -380,7 +379,7 @@ include 'connection.php';
                     <img src="images/client-3.jpg" alt="client" />
                     <!--text-->
                     <div class="profile-text">
-                        <strong>Ava Alex</strong>
+                        <strong>Bilkis khatun</strong>
                         <span>Marketer</span>
                     </div>
                 </div>
@@ -544,7 +543,6 @@ include 'connection.php';
             <div class="footer-links">
                 <strong>Product</strong>
                 <ul>
-                    <li><a href="#">Clothes</a></li>
                     <li><a href="#">Packages</a></li>
                     <li><a href="#">Popular</a></li>
                     <li><a href="#">New</a></li>
@@ -554,10 +552,9 @@ include 'connection.php';
             <div class="footer-links">
                 <strong>Category</strong>
                 <ul>
-                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Vegetable</a></li>
                     <li><a href="#">Meats</a></li>
-                    <li><a href="#">Kids</a></li>
-                    <li><a href="#">Clothes</a></li>
+                    <li><a href="#">Boundle</a></li>
                 </ul>
             </div>
             <!--links-------------------------->
