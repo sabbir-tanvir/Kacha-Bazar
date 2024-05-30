@@ -8,7 +8,6 @@ if (!isset($_SESSION['search_results'])) {
 $search_results = $_SESSION['search_results'];
 unset($_SESSION['search_results']);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,38 +16,32 @@ unset($_SESSION['search_results']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
     <link rel="stylesheet" href="product.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="results-container">
-        <h1>Search Results</h1>
+    <div class="product-heading">
+        <h2>Search Result</h2>
+    </div>
+    <div class="product-container">
         <?php if (count($search_results) > 0) : ?>
-            <table border="1">
-                <tr>
-                    <th>Category</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Weight</th>
-                    <th>Image</th>
-                </tr>
-                <?php foreach ($search_results as $result) : ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($result['category']); ?></td>
-                        <td><?php echo htmlspecialchars($result['name']); ?></td>
-                        <td><?php echo htmlspecialchars($result['price']); ?> TK</td>
-                        <td><?php echo htmlspecialchars($result['weight']); ?> KG</td>
-                        <td><img src="images/<?php echo htmlspecialchars($result['file']); ?>" alt="<?php echo htmlspecialchars($result['name']); ?>" width="100"></td>
-
-                    </tr>
-
-                <?php endforeach; ?>
-            </table>
+            <?php foreach ($search_results as $result) : ?>
+                <div class="product-box">
+                    <img src="images/<?php echo htmlspecialchars($result['file']); ?>" alt="<?php echo htmlspecialchars($result['name']); ?>" />
+                    <strong><?php echo htmlspecialchars($result['name']); ?></strong>
+                    <span class="quantity"><?php echo htmlspecialchars($result['weight']); ?> KG</span>
+                    <span class="price"><?php echo htmlspecialchars($result['price']); ?> TK</span>
+                    <a href="#" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add Cart
+                    </a>
+                    <a href="#" class="like-btn">
+                        <i class="far fa-heart"></i>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         <?php else : ?>
             <p>No results found for your search.</p>
         <?php endif; ?>
-        <a href="#" class="cart-btn">
-            <i class="fas fa-shopping-bag"></i> Add Cart
-        </a>
     </div>
 </body>
 

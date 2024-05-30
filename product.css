@@ -6,63 +6,134 @@ body {
     background: -webkit-linear-gradient(to right, #c7d4d4, #ACBB78);
     background: linear-gradient(to right, #c7d4d4, #ACBB78);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Use min-height instead of height */
+    box-sizing: border-box; /* Add this to ensure padding and borders are included in the element's total width and height */
 }
+
 a {
     text-decoration: none;
 }
-.results-container {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+
+.product-heading {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    text-align: center;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
     margin-top: 20px;
 }
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+
+.product-heading h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #202020;
+    letter-spacing: 0.5px;
+    text-align: center; /* Center text */
 }
-th {
-    background-color: #f2f2f2;
-    font-size: 18px;
-    font-weight: bold;
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust columns automatically */
+    grid-gap: 25px;
+    justify-items: center; /* Center items within their grid cells */
+    align-items: start; /* Align items at the start of the grid cell */
+    max-width: 1200px; /* Add max-width to the container */
+    margin: 40px auto; /* Center the container */
+    padding: 20px; /* Add padding to ensure the content doesn't touch the edges */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the container's total width */
 }
-td {
-    font-size: 18px;
-    font-style: italic;
+
+.product-box {
+    width: 100%;
+    max-width: 340px; /* Add max-width to control the size */
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    background-color: #ffffffdf;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; /* Ensure padding is included in the box's total width */
 }
-img {
-    display: block;
-    margin: 0 auto;
+
+.product-box img {
+    width: 90%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    margin: auto;
+    transform: scale(.8);
+    transition: transform .5s ease;
 }
-.cart-btn {
-    width: 30%;
+
+.product-box img:hover {
+    transform: scale(1.1);
+}
+
+.product-box strong {
+    color: hsl(0, 83%, 50%);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.product-box .quantity {
+    color: hsl(246, 100%, 51%);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.product-box .price {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #393939;
+}
+
+.product-box .cart-btn {
+    width: 100%;
     height: 40px;
     background-color: #ecf7ee;
     color: #4eb060;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto 0; /* Center the button horizontally and add margin to the top */
+    margin-top: 20px;
     transition: all ease 0.3s;
     border-radius: 3px;
 }
-.cart-btn i {
+
+.product-box .cart-btn i {
     margin-right: 10px;
 }
-.cart-btn:hover {
+
+.product-box .cart-btn:hover {
     background-color: #4eb060;
     color: #ffffff;
     transition: all ease 0.3s;
     border-radius: 10px;
+}
+
+.product-box .like-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    color: #c9c9c9;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
 }

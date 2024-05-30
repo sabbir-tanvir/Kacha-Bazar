@@ -131,98 +131,8 @@ include 'connection.php';
         <!--box-container------>
         <div class="product-container">
             <!--box---------->
-            <div class="product-box">
-                <img src="images/apple.png" alt="apple" />
-                <strong>Apple</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">200 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/chili.png" alt="apple" />
-                <strong>Chili</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">60 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/onion.png" alt="apple" />
-                <strong>Onion</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">60 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/patato.png" alt="apple" />
-                <strong>Patato</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">40 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/garlic.png" alt="apple" />
-                <strong>Garlic</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">80 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/tamato.png" alt="apple" />
-                <strong>Tamato</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">40 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
 
             <?php
-
 
             $select_query = "SELECT * FROM items";
             $result = mysqli_query($db_connect, $select_query);
@@ -263,96 +173,6 @@ include 'connection.php';
         </div>
         <!--box-container------>
         <div class="product-container">
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/goruu.png" alt="apple" />
-                <strong>Apple</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">200 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/goru3.png" alt="apple" />
-                <strong>Chili</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">60 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/khasi.png" alt="apple" />
-                <strong>Onion</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">60 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/fish2.png" alt="apple" />
-                <strong>Patato</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">40 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/murgi.png" alt="apple" />
-                <strong>Garlic</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">80 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
-            <!--box---------->
-            <div class="product-box">
-                <img src="images/murgi3.png" alt="apple" />
-                <strong>Tamato</strong>
-                <span class="quantity">1 KG</span>
-                <span class="price">40 TK</span>
-                <!--cart-btn------->
-                <a href="#" class="cart-btn">
-                    <i class="fas fa-shopping-bag"></i> Add Cart
-                </a>
-                <!--like-btn------->
-                <a href="#" class="like-btn">
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
 
             <?php
 
@@ -744,7 +564,7 @@ include 'connection.php';
             <div class="footer-links">
                 <strong>Contact</strong>
                 <ul>
-                    <li><a href="#">Phone : 01777357613</a></li>
+                    <li><a href="#">Phone : 0177777777</a></li>
                     <li><a href="#">Email : sabbirmahmudtanvir@gmail.com</a></li>
                 </ul>
             </div>

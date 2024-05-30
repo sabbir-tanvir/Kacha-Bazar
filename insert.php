@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
         }
 
         if (mysqli_query($db_connect, $insert_query)) {
-            echo "Data inserted successfully";
+
         } else {
             echo "Error: " . $insert_query . "<br>" . mysqli_error($db_connect);
         }
