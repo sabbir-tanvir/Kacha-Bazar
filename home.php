@@ -59,7 +59,12 @@ include 'connection.php';
         <img src="images/bg-2.png" class="bg-2" alt="bg-2" />
         <!--text------->
         <div class="search-banner-text">
-            <h1>Kanchon Daily Kacha Bazar</h1>
+
+            <h1 class="ml6">
+                <span class="text-wrapper">
+                    <span class="letters">Kanchon Daily Kacha Bazar</span>
+                </span>
+            </h1>
             <strong>#Free Delivery</strong>
             <!--search-box------>
             <form action="search.php" method="POST" class="search-box">
@@ -90,7 +95,7 @@ include 'connection.php';
             <!--box---------------->
             <a href="#" class="category-box">
                 <img src="images/Vegetables.png" alt="Fish" />
-                <span>Vegatbles</span>
+                <span>Vegetables</span>
             </a>
             <!--box---------------->
             <a href="#" class="category-box">
@@ -124,7 +129,7 @@ include 'connection.php';
     <section id="popular-product">
         <!--heading----------->
         <div class="product-heading">
-            <h3>Popular Product</h3>
+            <h3>Vegetables</h3>
             <span>All</span>
         </div>
         <!--box-container------>
@@ -568,7 +573,7 @@ include 'connection.php';
         </div>
     </footer>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="script.js"></script>
 </body>
 
