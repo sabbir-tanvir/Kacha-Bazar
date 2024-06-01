@@ -57,6 +57,11 @@ a {
     box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.5);
     box-sizing: border-box; /* Ensure padding is included in the box's total width */
 }
+.product-box:hover {
+    box-shadow: 5px 5px 45px 10px rgba(0, 0, 0, 0.5);
+
+}
+
 
 .product-box img {
     width: 90%;

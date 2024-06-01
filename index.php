@@ -6,8 +6,8 @@ session_start();
 $error_message = false;
 
 if (isset($_POST['login'])) {
-    $name = $_POST['a_name'];
-    $pass = $_POST['a_pass'];
+    $name = $_POST['u_name'];
+    $pass = $_POST['u_pass'];
 
     $query = "SELECT * FROM user WHERE u_name = ? AND u_pass = ?";
     $stmt = mysqli_prepare($db_connect, $query);
@@ -51,10 +51,10 @@ if (isset($_POST['login'])) {
         <form method="post" action="index.php" id="login-form">
             <div class="admin-input">
                 <div class="username">
-                    <input type="text" name="a_name" id="username" class="item" placeholder="Username" required>
+                    <input type="text" name="u_name" id="username" class="item" placeholder="Username" required>
                 </div>
                 <div class="password">
-                    <input type="password" name="a_pass" id="password" class="item" placeholder="Password" required>
+                    <input type="password" name="u_pass" id="password" class="item" placeholder="Password" required>
                 </div>
             </div>
             <br>
