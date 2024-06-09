@@ -45,10 +45,17 @@ include 'connection.php';
                 <span>0</span>
             </a>
             <!--cart----->
-            <a href="#" class="cart">
+            <a href="#" class="cart cart__counter" id="cart_counter">
                 <i class="fas fa-shopping-cart"></i>
-                <span>0</span>
+                <span id="total_counter">0</span>
             </a>
+        </div>
+        <div class="cart cart__items">
+            <div class="cart__item_list"></div>
+            <div class="check_out">
+                <h4>Total Amount: $<span class="total__cost">0</span></h4>
+                <button class="btn check_out_btn">Checkout</button>
+            </div>
         </div>
     </nav>
     <!--nav-end--------------------->
@@ -150,9 +157,7 @@ include 'connection.php';
                         <span class="quantity"><?php echo htmlspecialchars($row['weight']); ?> KG</span>
                         <span class="price"><?php echo htmlspecialchars($row['price']); ?> TK</span>
                         <!--cart-btn------->
-                        <a href="#" class="cart-btn">
-                            <i class="fas fa-shopping-bag"></i> Add Cart
-                        </a>
+                        <div class="cart-btn btn__add__to__cart"  data-name="<?php echo htmlspecialchars($row['name']); ?>" data-price="<?php echo htmlspecialchars($row['price']); ?>" data-image="<?php echo htmlspecialchars($row['file']); ?>">Add Cart</div>
                         <!--like-btn------->
                         <a href="#" class="like-btn">
                             <i class="far fa-heart"></i>
@@ -193,9 +198,8 @@ include 'connection.php';
                         <span class="quantity"><?php echo htmlspecialchars($row['weight']); ?> KG</span>
                         <span class="price"><?php echo htmlspecialchars($row['price']); ?> TK</span>
                         <!--cart-btn------->
-                        <a href="#" class="cart-btn">
-                            <i class="fas fa-shopping-bag"></i> Add Cart
-                        </a>
+                        <div class="cart-btn btn__add__to__cart" data-name="<?php echo htmlspecialchars($row['name']); ?>" data-price="<?php echo htmlspecialchars($row['price']); ?>" data-image="<?php echo htmlspecialchars($row['file']); ?>">Add Cart</div>
+
                         <!--like-btn------->
                         <a href="#" class="like-btn">
                             <i class="far fa-heart"></i>
