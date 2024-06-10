@@ -395,6 +395,7 @@ h1 {
     margin-top: 20px;
     transition: all ease 0.3s;
     border-radius: 3px;
+    cursor: pointer; 
 }
 
 .product-box .cart-btn i {
@@ -1171,6 +1172,51 @@ footer {
     overflow-y: auto;
     padding: 10px;
 }
+
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    opacity: 0.9;
+}
+
+
+.alert.success {
+    background-color: #4caf50;
+}
+
+.alert.error {
+    background-color: #f44336;
+}
+
+.alert.warning {
+    background-color: #ff9800;
+}
+
+.alert.info {
+    background-color: #2196f3;
+}
+
+.alert.trash {
+    background-color: #333;
+}
+
+.alert.show {
+    display: block;
+}
+
+
 
 
 

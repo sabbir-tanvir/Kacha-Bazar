@@ -17,6 +17,8 @@ include 'connection.php';
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Kanchon Food Store</title>
 </head>
 
@@ -35,15 +37,15 @@ include 'connection.php';
             <li><a href="home.php" class="active">Home</a></li>
             <li><a href="#category">Categories</a></li>
             <li><a href="#popular-product">Our Packages</a></li>
-            <li><a href="reg.php">Feedback</a></li>
+            <li><a href="#contact">Feedback</a></li>
         </ul>
         <!--right-nav-(cart-like)-->
         <div class="right-nav">
             <!--like----->
-            <a href="#" class="like">
+            <!-- <a href="#" class="like">
                 <i class="far fa-heart"></i>
                 <span>0</span>
-            </a>
+            </a> -->
             <!--cart----->
             <a href="#" class="cart cart__counter" id="cart_counter">
                 <i class="fas fa-shopping-cart"></i>
@@ -95,12 +97,12 @@ include 'connection.php';
         <!--box-container---------->
         <div class="category-container">
             <!--box---------------->
-            <a href="#" class="category-box">
+            <a href="#popular-product" class="category-box">
                 <img src="images/fish.png" alt="Fish" />
                 <span>Fish & Meat</span>
             </a>
             <!--box---------------->
-            <a href="#" class="category-box">
+            <a href="#popular-product" class="category-box">
                 <img src="images/Vegetables.png" alt="Fish" />
                 <span>Vegetables</span>
             </a>
@@ -157,7 +159,7 @@ include 'connection.php';
                         <span class="quantity"><?php echo htmlspecialchars($row['weight']); ?> KG</span>
                         <span class="price"><?php echo htmlspecialchars($row['price']); ?> TK</span>
                         <!--cart-btn------->
-                        <div class="cart-btn btn__add__to__cart"  data-name="<?php echo htmlspecialchars($row['name']); ?>" data-price="<?php echo htmlspecialchars($row['price']); ?>" data-image="<?php echo htmlspecialchars($row['file']); ?>">Add Cart</div>
+                        <div class="cart-btn btn__add__to__cart success_alert" data-name="<?php echo htmlspecialchars($row['name']); ?>" data-price="<?php echo htmlspecialchars($row['price']); ?>" data-image="<?php echo htmlspecialchars($row['file']); ?>">Add Cart</div>
                         <!--like-btn------->
                         <a href="#" class="like-btn">
                             <i class="far fa-heart"></i>
@@ -198,7 +200,8 @@ include 'connection.php';
                         <span class="quantity"><?php echo htmlspecialchars($row['weight']); ?> KG</span>
                         <span class="price"><?php echo htmlspecialchars($row['price']); ?> TK</span>
                         <!--cart-btn------->
-                        <div class="cart-btn btn__add__to__cart" data-name="<?php echo htmlspecialchars($row['name']); ?>" data-price="<?php echo htmlspecialchars($row['price']); ?>" data-image="<?php echo htmlspecialchars($row['file']); ?>">Add Cart</div>
+                        
+                        <div  class="cart-btn btn__add__to__cart success_alert" data-name="<?php echo htmlspecialchars($row['name']); ?>" data-price="<?php echo htmlspecialchars($row['price']); ?>" data-image="<?php echo htmlspecialchars($row['file']); ?>">Add Cart</div>
 
                         <!--like-btn------->
                         <a href="#" class="like-btn">
@@ -229,7 +232,7 @@ include 'connection.php';
                 <span class="quantity">Lemone, Tamato, Patato,+4</span>
                 <span class="price">1000 TK</span>
                 <!--cart-btn------->
-                <a href="#" class="cart-btn">
+                <a href="#" class="cart-btn success_alert">
                     <i class="fas fa-shopping-bag"></i> Add Cart
                 </a>
                 <!--like-btn------->
@@ -244,7 +247,7 @@ include 'connection.php';
                 <span class="quantity">Lemone, Tamato, Patato,+2</span>
                 <span class="price">700 tk</span>
                 <!--cart-btn------->
-                <a href="#" class="cart-btn">
+                <a href="#" class="cart-btn success_alert">
                     <i class="fas fa-shopping-bag"></i> Add Cart
                 </a>
                 <!--like-btn------->
@@ -259,7 +262,7 @@ include 'connection.php';
                 <span class="quantity">Lemone, Tamato, Patato</span>
                 <span class="price">500 TK</span>
                 <!--cart-btn------->
-                <a href="#" class="cart-btn">
+                <a href="#" class="cart-btn success_alert">
                     <i class="fas fa-shopping-bag"></i> Add Cart
                 </a>
                 <!--like-btn------->
@@ -274,7 +277,7 @@ include 'connection.php';
                 <span class="quantity">Lemone, Tamato, Patato,+4</span>
                 <span class="price">1300 TK</span>
                 <!--cart-btn------->
-                <a href="#" class="cart-btn">
+                <a href="#" class="cart-btn success_alert">
                     <i class="fas fa-shopping-bag"></i> Add Cart
                 </a>
                 <!--like-btn------->
@@ -289,7 +292,7 @@ include 'connection.php';
                 <span class="quantity">Lemone, Tamato, Patato,+2</span>
                 <span class="price">600 TK</span>
                 <!--cart-btn------->
-                <a href="#" class="cart-btn">
+                <a href="#" class="cart-btn success_alert">
                     <i class="fas fa-shopping-bag"></i> Add Cart
                 </a>
                 <!--like-btn------->
@@ -304,7 +307,7 @@ include 'connection.php';
                 <span class="quantity">Lemone, Tamato, Patato</span>
                 <span class="price">400 TK</span>
                 <!--cart-btn------->
-                <a href="#" class="cart-btn">
+                <a href="#" class="cart-btn success_alert">
                     <i class="fas fa-shopping-bag"></i> Add Cart
                 </a>
                 <!--like-btn------->
@@ -485,7 +488,7 @@ include 'connection.php';
     </section>
     <!-- Feedback -->
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>
             Give Us Your Feedback
         </h2>
@@ -552,8 +555,8 @@ include 'connection.php';
             <div class="footer-links">
                 <strong>Product</strong>
                 <ul>
-                    <li><a href="#">Packages</a></li>
-                    <li><a href="#">Popular</a></li>
+                    <li><a href="#popular-bundle-pack">Packages</a></li>
+                    <li><a href="#popular-product">Popular</a></li>
                     <li><a href="#">New</a></li>
                 </ul>
             </div>
@@ -561,9 +564,9 @@ include 'connection.php';
             <div class="footer-links">
                 <strong>Category</strong>
                 <ul>
-                    <li><a href="#">Vegetable</a></li>
-                    <li><a href="#">Meats</a></li>
-                    <li><a href="#">Boundle</a></li>
+                    <li><a href="#popular-product">Vegetable</a></li>
+                    <li><a href="#popular-product">Meats</a></li>
+                    <li><a href="#popular-bundle-pack">Boundle</a></li>
                 </ul>
             </div>
             <!--links-------------------------->

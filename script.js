@@ -125,11 +125,70 @@ document.querySelector('.cart__items').addEventListener('click', event => {
 });
 
 document.querySelector('.check_out_btn').addEventListener('click', event => {
-  window.alert("Checkout successfully completed");
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Your order has been placed",
+    showConfirmButton: false,
+    timer: 1500
+  });
 });
 
 // Initialize cart on page load
 renderCart();
 updateCartCounter();
 
+
+class Alert {
+  static info(message, title, options = {}) {
+    this.showAlert('info', message, title, options);
+  }
+
+  static success(message, title, options = {}) {
+    this.showAlert('success', message, title, options);
+  }
+
+  static warning(message, title, options = {}) {
+    this.showAlert('warning', message, title, options);
+  }
+
+  static error(message, title, options = {}) {
+    this.showAlert('error', message, title, options);
+  }
+
+  static trash(message, title, options = {}) {
+    this.showAlert('trash', message, title, options);
+  }
+
+  static showAlert(type, message, title, options) {
+    const alertBox = document.createElement('div');
+    alertBox.classList.add('alert', type);
+    alertBox.innerHTML = `
+          <strong>${title}</strong> ${message}
+      `;
+    document.body.appendChild(alertBox);
+
+    alertBox.classList.add('show');
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+      alertBox.addEventListener('transitionend', () => {
+        alertBox.remove();
+      });
+    }, options.displayDuration || 3000);
+  }
+}
+
+document.querySelectorAll('.success_alert').forEach(button => {
+  button.addEventListener('click', () => {
+    Alert.success('Added to cart successfully!', 'Success', { displayDuration: 3000 });
+  });
+});
+
+// $(document).on('click', '#success', function(e) {
+//   swal(
+//     'Success',
+//     'You clicked the <b style="color:green;">Success</b> button!',
+//     'success'
+//   )
+// });
 
