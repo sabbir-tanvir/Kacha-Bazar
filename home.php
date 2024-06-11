@@ -119,7 +119,7 @@ include 'connection.php';
             <!--box---------------->
             <a href="#" class="category-box">
                 <img src="images/office.png" alt="Fish" />
-                <span>Office</span>
+                <span>Study</span>
             </a>
             <!--box---------------->
             <a href="#" class="category-box">
@@ -200,8 +200,8 @@ include 'connection.php';
                         <span class="quantity"><?php echo htmlspecialchars($row['weight']); ?> KG</span>
                         <span class="price"><?php echo htmlspecialchars($row['price']); ?> TK</span>
                         <!--cart-btn------->
-                        
-                        <div  class="cart-btn btn__add__to__cart success_alert" data-name="<?php echo htmlspecialchars($row['name']); ?>" data-price="<?php echo htmlspecialchars($row['price']); ?>" data-image="<?php echo htmlspecialchars($row['file']); ?>">Add Cart</div>
+
+                        <div class="cart-btn btn__add__to__cart success_alert" data-name="<?php echo htmlspecialchars($row['name']); ?>" data-price="<?php echo htmlspecialchars($row['price']); ?>" data-image="<?php echo htmlspecialchars($row['file']); ?>">Add Cart</div>
 
                         <!--like-btn------->
                         <a href="#" class="like-btn">
@@ -349,10 +349,7 @@ include 'connection.php';
                 </div>
                 <!--==comments===-->
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ea
-                    id, itaque architecto atque mollitia aperiam voluptatem consequatur
-                    incidunt sed placeat, harum recusandae quaerat at hic labore eius
-                    laborum quas!
+                    Hey Sabbir You really done some good work, the visualization and the funcionality of this project really looks amazing and i wish you will make some amazing project like this in the future
                 </p>
             </div>
             <!--box------------->
@@ -377,10 +374,7 @@ include 'connection.php';
                 </div>
                 <!--==comments===-->
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ea
-                    id, itaque architecto atque mollitia aperiam voluptatem consequatur
-                    incidunt sed placeat, harum recusandae quaerat at hic labore eius
-                    laborum quas!
+                    Keep it up dude , The overall looks of this project is really amazing and the simpicity of the product box is top notch Well done and im happy with the project and i hope you will add some new staff to this project in the future.
                 </p>
             </div>
             <!--box------------->
@@ -405,8 +399,7 @@ include 'connection.php';
                 </div>
                 <!--==comments===-->
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ea
-                    id, itaque architecto atque
+                    Everything working fine and its looks amazing , you can always improve the website adding some new feture to this and try to get investor that will help in the long run..
                 </p>
             </div>
             <?php

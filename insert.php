@@ -243,7 +243,6 @@ if (isset($_POST['submit'])) {
             $run = mysqli_query($db_connect, $sql);
 
             if ($run) {
-                echo "<h1>Data Deleted</h1>";
                 header("Location: insert.php");
                 exit();
             } else {

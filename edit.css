@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+body {
+    background: #ACBB78;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c7d4d4, #ACBB78);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c7d4d4, #ACBB78);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-container {
+    top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.7);
+}
+h1{
+    text-align: center;
+    padding-top: 50px;
+}
+.btn {
+    text-align: center;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 30%;
+}
+
+.output {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    backdrop-filter: blur(8px);
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 2px solid black;
+    text-align: left;
+    background-color: #f2f2f2;
+    backdrop-filter: blur(8px);
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: underline;
+}
